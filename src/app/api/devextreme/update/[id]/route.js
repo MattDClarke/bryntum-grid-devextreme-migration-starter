@@ -6,12 +6,12 @@ export async function PUT(request, { params }) {
 
   try {
     await DevExtremeEmployee.update(reqBody, { where: { id } });
-    const newEmployee = await DevExtremeEmployee.findByPk(id);
+    const updatedEmployee = await DevExtremeEmployee.findByPk(id);
 
-    return Response.json(newEmployee);
+    return Response.json(updatedEmployee);
   } catch (error) {
-    return new Response("Updating appointments data failed", {
-      status: 400,
+    return new Response("Updating employees data failed", {
+      status: 500,
     });
   }
 }

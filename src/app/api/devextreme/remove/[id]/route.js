@@ -7,7 +7,7 @@ export async function DELETE(_, { params }) {
     return Response.json({ success: true });
   } catch (error) {
     return new Response("Removing employee failed", {
-      status: 400,
+      status: 500,
     });
   }
 }

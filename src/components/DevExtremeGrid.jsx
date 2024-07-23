@@ -96,14 +96,14 @@ const DevExtremeGrid = () => {
     }, []);
 
   return (
-    <div id="data-grid-demo">
+    <div id="data-grid">
       <DataGrid
         id="gridContainer"
         dataSource={dataSource}
         showBorders={true}
         repaintChangesOnly={true}
       >
-        <Paging enabled={false} /> 
+        <Paging enabled={false} />
         <Editing
           refreshMode="reshape"
           mode="cell"
@@ -112,7 +112,7 @@ const DevExtremeGrid = () => {
           allowDeleting={true}
         />
 
-        <Column dataField="prefix" caption="Title" width={55} />
+        <Column dataField="prefix" caption="Title" width={80} />
         <Column dataField="firstName" />
         <Column dataField="lastName" />
         <Column dataField="position" width={170} />

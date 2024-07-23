@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 
-const Grid = dynamic(() => import("./DevExtremeGrid"), {
+const Grid = dynamic(() => import("./BryntumGrid"), {
+  // const Grid = dynamic(() => import("./DevExtremeGrid"), {
   ssr: false,
   loading: () => {
     return (
@@ -22,6 +23,7 @@ const GridWrapper = () => {
   return (
     <>
       <Grid />
+      {/* <Grid /> */}
     </>
   );
 };

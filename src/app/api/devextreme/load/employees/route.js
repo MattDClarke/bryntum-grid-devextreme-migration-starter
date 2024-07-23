@@ -12,8 +12,8 @@ export async function GET() {
     });
     return Response.json({ employees });
   } catch (error) {
-    return new Response("Loading appointments data failed", {
-      status: 400,
+    return new Response("Loading employees data failed", {
+      status: 500,
     });
   }
 }

@@ -6,7 +6,6 @@ export async function POST(request, { params }) {
 
   try {
     const employee = await DevExtremeEmployee.create(reqBody);
-    console.log({ reqBody, employee });
     // const employeeData = employee._previousDataValues
     // Get the default values from the model's attributes
     const allFields = {};
@@ -16,7 +15,7 @@ export async function POST(request, { params }) {
     return Response.json(allFields);
   } catch (error) {
     return new Response("Adding employee failed", {
-      status: 400,
+      status: 500,
     });
   }
 }

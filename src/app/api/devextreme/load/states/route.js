@@ -6,7 +6,7 @@ export async function GET() {
     return Response.json({ states });
   } catch (error) {
     return new Response("Loading states data failed", {
-      status: 400,
+      status: 500,
     });
   }
 }
